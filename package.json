@@ -6,6 +6,8 @@
     "@jsonforms/core": "^3.3.0",
     "@jsonforms/material-renderers": "^3.3.0",
     "@jsonforms/react": "^3.3.0",
+    "@mui/icons-material": "^5.15.21",
+    "@mui/material": "^5.15.21",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -37,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0"
   }
 }
