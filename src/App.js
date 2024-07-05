@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { JsonForms } from '@jsonforms/react';
+import { materialRenderers, materialCells } from '@jsonforms/material-renderers';
+import TreeSelectControl from './TreeSelectControl';
+import TreeSelectControlTester from './treeSelectControlTester';
+import schema from './schemas/schema.json';
+import schemaui from './schemas/schemaui.json'
 
-function App() {
+const renderers = [
+  ...materialRenderers,
+  { tester: TreeSelectControlTester, renderer: TreeSelectControl }
+];
+
+
+const App = () => {
+  const [data, setData] = React.useState({});
+
+  const handleChange = (state) => setData(state.data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <JsonForms
+      schema={schema}
+      uischema={schemaui}
+      data={data}
+      renderers={renderers}
+      cells={materialCells}
+      onChange={({ data }) => handleChange({ data })}
+    />
   );
-}
+};
 
 export default App;
