@@ -1,0 +1,45 @@
+ {
+  "type": "object",
+  "properties": {
+    "Nom": {
+      "type": "string",
+      "title": "Nom"
+    },
+    "PaysVisités": {
+      "type": "object",
+      "title": "Pays visités",
+      "properties": {
+        "Europe": {
+          "type": "string",
+          "title": "Europe 🌍",
+          "enum": ["Belgique", "France", "Allemagne", "Espagne"]
+        },
+        "Afrique": {
+          "type": "string",
+          "title": "Afrique 🌍",
+          "enum": ["Tunisie", "Algérie", "Maroc", "Égypte", "Ghana"]
+        },
+        "Asie": {
+          "type": "string",
+          "title": "Asie 🌍",
+          "enum": ["Chine", "Japon", "Inde", "Vietnam"]
+        },
+        "Océanie": {
+          "type": "string",
+          "title": "Océanie 🌍",
+          "enum": ["Australie", "Vanuatu", "Fidji"]
+        },
+        "Amérique du Sud": {
+          "type": "string",
+          "title": "Amérique du Sud 🌍",
+          "enum": ["Argentine", "Brésil", "Pérou ", "Chili"]
+        },
+        "Amérique du Nord": {
+          "type": "string",
+          "title": "Amérique du Nord 🌍",
+          "enum": ["Canada", "Mexique", "Cuba"]
+        }
+      }
+    }
+  }
+}
